@@ -1,0 +1,118 @@
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN" "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+	<!-- Esquema general del sitio -->
+      
+      <definition name="baseLayout" template="/WEB-INF/paginas/basicTemplate.jsp">
+          <put-attribute name="title"  value="Template"/>
+          <put-attribute name="header" value="/WEB-INF/paginas/cabecera.jsp"/>
+
+          <put-attribute name="body"   value="/WEB-INF/paginas/body.jsp"/>
+          <put-attribute name="footer"   value="/WEB-INF/paginas/pie.jsp"/>
+      </definition>
+
+        <!-- Páginas de error y confirmación -->
+        <definition name="pagina.operacionExitosa" extends="baseLayout">
+		<put-attribute name="body" value="/WEB-INF/paginas/operacionExitosa.jsp" />
+	</definition>
+
+        <definition name="pagina.operacionError" extends="baseLayout">
+		<put-attribute name="body" value="/WEB-INF/paginas/operacionError.jsp" />
+	</definition>
+
+        <definition name="pagina.redirectError" template="/WEB-INF/paginas/redirectError.jsp">
+	</definition>
+
+<!-- Página de Acceso Denegado y FileUploadMultipartSizeExceeded-->
+
+	<definition name="pagina.accesoDenegado" extends="baseLayout">
+		<put-attribute name="cuerpo" value="/WEB-INF/paginas/accesoDenegado.jsp" />
+	</definition>
+
+	<definition name="pagina.fileUploadMultipartSizeExceeded" extends="baseLayout">
+		<put-attribute name="cuerpo" value="/WEB-INF/paginas/fileUploadMultipartSizeExceeded.jsp" />
+	</definition>
+
+	<definition name="pagina.redirectAccesoDenegado" template="/WEB-INF/paginas/accesoDenegadoRedirect.jsp"/>
+
+        <definition name="pagina.redirectInicio" template="/WEB-INF/paginas/redirectInicio.jsp">
+        </definition>
+
+         <definition name="pagina.exception" extends="baseLayout">
+		<put-attribute name="body" value="/WEB-INF/paginas/operacionError.jsp" />
+	</definition>
+
+	<!-- Fin de Página de Acceso Denegado  -->
+        
+	<!-- Página de inicio -->
+	<definition name="pagina.inicio" extends="baseLayout">
+            <put-attribute name="body" value="/WEB-INF/paginas/inicio.jsp" />
+	</definition>
+
+    
+
+       <definition name="baseLayoutLogin" template="/WEB-INF/paginas/basicTemplateLogin.jsp">
+          <put-attribute name="title"  value="Template"/>
+          <put-attribute name="header" value="/WEB-INF/paginas/cabeceraLogin.jsp"/>
+          <put-attribute name="body"   value="/WEB-INF/paginas/body.jsp"/>
+          <put-attribute name="footer"   value="/WEB-INF/paginas/pie.jsp"/>
+      </definition>
+
+       <definition name="pagina.login" extends="baseLayoutLogin">
+            <put-attribute name="body" value="/WEB-INF/login.jsp" />
+	</definition>
+	
+	<!-- Página de usuarios -->
+	<definition name="pagina.UsuarioListado" extends="baseLayout">
+            <put-attribute name="body"  value="/WEB-INF/paginas/seguridad/listadoUsuario.jsp" />
+        </definition>
+
+	<definition name="pagina.Usuario" extends="baseLayout">
+		<put-attribute name="body" value="/WEB-INF/paginas/seguridad/usuario.jsp" />
+	</definition>
+
+	<definition name="pagina.Oportunidad" extends="baseLayout">
+		<put-attribute name="body" value="/WEB-INF/paginas/oportunidades/oportunidad.jsp" />
+	</definition>
+
+        <definition name="pagina.OportunidadEdicion" extends="baseLayout">
+		<put-attribute name="body" value="/WEB-INF/paginas/oportunidades/oportunidadEdicion.jsp" />
+	</definition>
+
+        <definition name="pagina.ActividadEdicion" extends="baseLayout">
+		<put-attribute name="body" value="/WEB-INF/paginas/oportunidades/actividadEdicion.jsp" />
+	</definition>
+
+	<definition name="pagina.Contacto" extends="baseLayout">
+		<put-attribute name="body" value="/WEB-INF/paginas/oportunidades/contacto.jsp" />
+	</definition>
+
+        <definition name="pagina.Empresa" extends="baseLayout">
+		<put-attribute name="body" value="/WEB-INF/paginas/oportunidades/empresa.jsp" />
+	</definition>
+
+        <definition name="pagina.Actividad" extends="baseLayout">
+		<put-attribute name="body" value="/WEB-INF/paginas/oportunidades/actividad.jsp" />
+	</definition>
+
+         <definition name="pagina.Seguimiento" extends="baseLayout">
+		<put-attribute name="body" value="/WEB-INF/paginas/oportunidades/seguimiento.jsp" />
+	</definition>
+
+        <!-- Páginas oportunidades -->
+	<definition name="pagina.OportunidadListado" extends="baseLayout">
+		<put-attribute name="body" value="/WEB-INF/paginas/oportunidades/listadoOportunidades.jsp" />
+	</definition>
+        <definition name="pagina.EmpresaListado" extends="baseLayout">
+		<put-attribute name="body" value="/WEB-INF/paginas/oportunidades/listadoEmpresas.jsp" />
+	</definition>
+        <definition name="pagina.ContactoListado" extends="baseLayout">
+		<put-attribute name="body" value="/WEB-INF/paginas/oportunidades/listadoContactos.jsp" />
+	</definition>
+         <definition name="pagina.ActividadListado" extends="baseLayout">
+		<put-attribute name="body" value="/WEB-INF/paginas/oportunidades/listadoActividades.jsp" />
+	</definition>
+
+        <definition name="pagina.SeguimientoListado" extends="baseLayout">
+            <put-attribute name="body"  value="/WEB-INF/paginas/oportunidades/listadoSeguimientos.jsp" />
+        </definition>
+</tiles-definitions>

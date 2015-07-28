@@ -1,0 +1,169 @@
+.queryTable
+{
+	width: 50%;
+}
+
+.queryConsult
+{
+	background-color: #EAEAEA;
+	border: 1px solid #dfdfdf;
+	float: left;
+	padding-bottom: 0px;
+	padding-top: 10px;
+	width: 773px;
+}
+
+.queryTable th
+{
+	background-image: url(../imagenes/tables/thBackG.gif);
+	background-repeat: repeat-x;
+	border-left-color: #CCCCCC;
+	border-left-style: solid;
+	border-left-width: 1px;
+	border-right-color: #CCCCCC;
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-top-color: #666666;
+	border-top-style: solid;
+	border-top-width: 1px;
+	border-bottom-color: #ffffff;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	color: #FFFFFF;
+	background-color: #A9C0CE;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	height: 20px;
+	line-height: 16px;
+	text-align: center;
+	padding:4px;
+}
+
+.queryTable th a
+{
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+
+
+.queryTable td
+{
+	padding-bottom: 3px;
+	padding-left: 4px;
+	padding-right: 4px;
+	padding-top: 3px;
+}
+
+.trDark td, .trBright td
+{
+	border: 1px solid #C7C7C7;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	height: 23px;
+	line-height: 23px;
+	color: #000000;
+	text-align:left;
+}
+.trBright td
+{
+	background-color: #EBEBEB;
+}
+.trDark td
+{
+	background-color: #FBFBFB;
+}
+.trDark a, .trBright a
+{
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.trBright td.tdID,
+.trBright td.tdList,
+.trBright td.tdDate,
+.trDark td.tdID,
+.trDark td.tdList,
+.trDark td.tdDate
+{
+	text-align: center;
+}
+
+
+.trDark td.tdNumbers,
+.trBright td.tdNumbers
+{
+	text-align: right;
+}
+
+.sorted a
+{
+	/*background-color: red;*/
+	padding-right:15px;
+	width:100%;
+}
+
+.order1 a
+{
+	background-image: url(../imagenes/tables/orderDown.jpg);
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+
+.order2 a
+{
+	background-image: url(../imagenes/tables/orderUp.jpg);
+	background-repeat: no-repeat;
+	background-position: right center;
+}
+
+.queryResults
+{
+	float: left;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	line-height: 30px;
+	margin-right: 12px;
+	padding-left: 4px;
+}
+#queryResults
+{
+	color: #FFFFFF;
+	float: right;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	height: 30px;
+}
+#queryResults input
+{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	width: 25px;
+	padding: 1px;
+	text-align:right;
+	line-height:13px;
+	border:1px solid #2E5A90;
+}
+#queryResults span
+{
+	color: #FFFFFF;
+	float: left;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	height: 28px;
+	margin-left: 12px;
+	margin-right: 12px;
+}
+#queryResults table td
+{
+	color: #ffffff;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	height: 30px;
+	line-height: 30px;
+	padding-left: 1px;
+	padding-right: 2px;
+	vertical-align: middle;
+}

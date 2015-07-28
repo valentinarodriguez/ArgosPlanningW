@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=iso-8859-1" />
+	<link rel="stylesheet" href="images/style.css" type="text/css" />
+	<title>Argos Planning</title>
+    <style type="text/css">
+<!--
+.style1 {color: #FF0000}
+-->
+    </style>
+</head>
+<body>
+	<div class="content">
+		<div class="header">
+			<div class="logo">
+				<h1><a href="#" title="Centralized Internet Services"><span class="dark">Argos</span>Planning</a></h1>
+			    <div class="top_info_right">Bievenida Valentina</div>
+			    <p>&nbsp;</p>
+		  </div>
+	  </div>
+		
+		<div class="bar">
+			<ul>
+                <li><a href="index.html" accesskey="i">Inicio</a></li>
+			  	<li><a href="oportunidades.html" accesskey="o">Oportunidades</a></li>
+			  	<li class="active"><a href="actividades.html" accesskey="a">Actividades</a></li>
+				<li><a href="seguimientos.html" accesskeys="s">Seguimientos</a></li>
+				<li><a href="reuniones.html" accesskey="r">Reuniones</a></li>
+				<li><a href="empresas.html" accesskey="e">Empresas</a></li>
+			  <li><a href="contactos.html" accesskey="c">Contactos</a></li>
+			</ul>
+		</div>
+        <div class="search_field">
+			<form method="post" action="?">
+				<div class="search_form">
+				<p>Buscar : 
+			  <label>Fecha Desde
+		      <input type="text" name="fechaDesde" id="fechaDesde" />
+                              </label>
+              <label>Fecha Hasta
+              <input type="text" name="fechaHasta" id="fechaHasta" />
+                              </label>
+              <input type="submit" value="Buscar" class="submit" />
+				<a class="grey" href="#">Avanzada</a>
+				</div>
+			</form>
+			
+			<p>&nbsp;</p>
+		</div>
+	  <div class="left">
+			<h3>Listado Actividades</h3>
+			
+			<div class="left_box">
+	 <table width="507" border="0">
+                <tr>
+                  <th width="78" scope="col"><div align="center">Oportunidad</div></th>
+                  <th width="45" scope="col"><div align="center">IdTarea</div></th>
+                  <th width="96" scope="col"><div align="center">Titulo Tarea</div></th>
+                  <th width="38" scope="col"> <div align="center">Fecha </div></th>
+                  <th width="94" scope="col"><div align="center">Cliente</div></th>
+                  <th width="130" scope="col"><div align="center">Responsable</div></th>
+                </tr>
+                <tr>
+                  <td><div align="center"><a href="detalle.html">1</a></div></td>
+                  <td><div align="center">1</div></td>
+                  <td><div align="center"><a href="agregarTarea.html">Confirmar reunion</a></div></td>
+                  <td><div align="center">6/10/09</div></td>
+                  <td><div align="center">CUTCSTA</div></td>
+                  <td><div align="center">Cliente</div></td>
+                </tr>
+                <tr>
+                  <td><div align="center"><a href="detalle.html">2</a></div></td>
+                  <td><div align="center">1</div></td>
+                  <td><div align="center"><a href="agregarTarea.html">Enviar cotizacion</a></div></td>
+                  <td><div align="center">8/12/09</div></td>
+                  <td><div align="center">MOSCA HNOS</div></td>
+                  <td><div align="center">Rafael Perez</div></td>
+                </tr>
+                 <tr>
+                  <td><div align="center"><a href="detalle.html">3</a></div></td>
+                  <td><div align="center">1</div></td>
+                  <td><div align="center"><a href="agregarTarea.html">Armar Propuesta</a></div></td>
+                  <td><div align="center">8/12/09</div></td>
+                  <td><div align="center">SUP.DISCO</div></td>
+                  <td><div align="center">Dr. Perez</div></td>
+                </tr>
+  			</table>
+			 </p>
+	    </div>
+	 <div class="left_box">
+     <h3>Datos Actividad</h3>
+     <p></p>
+   <form id="form1" name="form1" method="post" action="">
+  <label for="titulo">Titulo</label>
+  <input type="text" name="titulo" id="titulo" />
+</form>
+<form id="form2" name="form2" method="post" action="">
+  <label for="tipo">Tipo de Tarea</label>
+  <select name="tipo" id="tipo">
+    <option>llamar</option>
+  </select>
+  <label for="descripcion"><br />
+  <br />
+  Descripcion</label>
+  <label for="descripcion"></label>
+  <textarea name="descripcion" id="descripcion" cols="45" rows="5"></textarea>
+</form>
+<form id="form3" name="form3" method="post" action="">
+  Asignado a 
+  <label for="Asignado"></label>
+  <textarea name="Asignado" id="Asignado" cols="45" rows="5">Valentina Rodriguez
+Pablo Rodriguez</textarea>
+</form>
+<form id="form5" name="form5" method="post" action="">
+  <label for="responsable">Responsable</label>
+  <select name="responsable" id="responsable">
+    <option>Cliente</option>
+  </select>
+</form>
+<p>&nbsp;</p>
+<p>Fecha Vencimiento June 18, 2010 </p>
+<p>Enviar aviso vencimiento
+  <label>
+  <input type="checkbox" name="vencimiento" id="vencimiento" />
+  </label>
+en la fecha June 18, 2010</p>
+<form id="form4" name="form4" method="post" action="">
+  Realizar Seguimiento <input type="checkbox" name="realizarSeguimiento" id="realizarSeguimiento" />
+  <label for="realizarSeguimiento"><br />
+  Notificarme
+  <input type="checkbox" name="notificarme" id="notificarme" />
+</label>
+  <p>Notificar a 
+    <textarea name="Asignado2" id="Asignado2" cols="45" rows="5"></textarea>
+  </p>
+</form>
+<form id="form6" name="form6" method="post" action="">
+  <label>
+  <input type="submit" name="salvar" id="salvar" value="Salvar" />
+  </label>
+</form>
+</div>
+        <div class="right">
+		<div class="right_urgents">
+        
+        <h3 class="style1">Recordatorios:</h3>
+      </div>
+
+		  <div class="right_articles">
+				<p><img src="images/image.gif" alt="Image" title="Image" class="image" /><b>Lorem ipsum dolor sit amet</b><br />consectetuer 			adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam.</p>
+		  </div>
+          	<div class="right_articles">
+				<p><img src="images/image.gif" alt="Image" title="Image" class="image" /><b>Lorem ipsum dolor sit amet</b><br />consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam.</p>
+			</div>
+			<div class="right_articles">
+				<p><img src="images/image.gif" alt="Image" title="Image" class="image" /><b>Lorem ipsum dolor sit amet</b><br />consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam.</p>
+			</div>
+			<h3>Ultimas Actividades:</h3>
+	  <div class="right_articles">
+				<p><img src="images/image.gif" alt="Image" title="Image" class="image" /><b>Proximas Reuniones</b><br />consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam.</p>
+		  </div>
+			<div class="right_articles">
+				<p><img src="images/image.gif" alt="Image" title="Image" class="image" /><b>Proximas Actividades</b><br />consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam.</p>
+			</div>
+		
+		</div>	
+		<div class="footer">
+			<p><a href="#">Aviso Legal</a><br />
+			&copy; Copyright 2010 </p>
+	  </div>
+	</div>
+</body>
+</html>

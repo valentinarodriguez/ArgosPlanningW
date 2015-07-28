@@ -1,0 +1,890 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2-hudson-752-. --><xs:schema xmlns:tns="http://ws.WS.argos.suricata.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://ws.WS.argos.suricata.com/">
+
+<xs:element name="DatosDuplicadosException" type="tns:DatosDuplicadosException" />
+
+<xs:element name="DatosNoEncontradosException" type="tns:DatosNoEncontradosException" />
+
+<xs:element name="DocumentoException" type="tns:DocumentoException" />
+
+<xs:element name="ErrorSQLException" type="tns:ErrorSQLException" />
+
+<xs:element name="FaltaParametroException" type="tns:FaltaParametroException" />
+
+<xs:element name="TipoDatosException" type="tns:TipoDatosException" />
+
+<xs:element name="borrarContacto" type="tns:borrarContacto" />
+
+<xs:element name="borrarContactoResponse" type="tns:borrarContactoResponse" />
+
+<xs:element name="borrarEmpresa" type="tns:borrarEmpresa" />
+
+<xs:element name="borrarEmpresaResponse" type="tns:borrarEmpresaResponse" />
+
+<xs:element name="borrarOportunidad" type="tns:borrarOportunidad" />
+
+<xs:element name="borrarOportunidadResponse" type="tns:borrarOportunidadResponse" />
+
+<xs:element name="buscarActividad" type="tns:buscarActividad" />
+
+<xs:element name="buscarActividadResponse" type="tns:buscarActividadResponse" />
+
+<xs:element name="buscarContacto" type="tns:buscarContacto" />
+
+<xs:element name="buscarContactoResponse" type="tns:buscarContactoResponse" />
+
+<xs:element name="buscarDocumento" type="tns:buscarDocumento" />
+
+<xs:element name="buscarDocumentoResponse" type="tns:buscarDocumentoResponse" />
+
+<xs:element name="buscarEmpresa" type="tns:buscarEmpresa" />
+
+<xs:element name="buscarEmpresaResponse" type="tns:buscarEmpresaResponse" />
+
+<xs:element name="buscarOportunidad" type="tns:buscarOportunidad" />
+
+<xs:element name="buscarOportunidadResponse" type="tns:buscarOportunidadResponse" />
+
+<xs:element name="buscarRol" type="tns:buscarRol" />
+
+<xs:element name="buscarRolResponse" type="tns:buscarRolResponse" />
+
+<xs:element name="buscarSeguimiento" type="tns:buscarSeguimiento" />
+
+<xs:element name="buscarSeguimientoResponse" type="tns:buscarSeguimientoResponse" />
+
+<xs:element name="buscarUsuario" type="tns:buscarUsuario" />
+
+<xs:element name="buscarUsuarioResponse" type="tns:buscarUsuarioResponse" />
+
+<xs:element name="crearActividad" type="tns:crearActividad" />
+
+<xs:element name="crearActividadResponse" type="tns:crearActividadResponse" />
+
+<xs:element name="crearContacto" type="tns:crearContacto" />
+
+<xs:element name="crearContactoResponse" type="tns:crearContactoResponse" />
+
+<xs:element name="crearEmpresa" type="tns:crearEmpresa" />
+
+<xs:element name="crearEmpresaResponse" type="tns:crearEmpresaResponse" />
+
+<xs:element name="crearOportunidad" type="tns:crearOportunidad" />
+
+<xs:element name="crearOportunidadResponse" type="tns:crearOportunidadResponse" />
+
+<xs:element name="crearRol" type="tns:crearRol" />
+
+<xs:element name="crearRolResponse" type="tns:crearRolResponse" />
+
+<xs:element name="crearSeguimiento" type="tns:crearSeguimiento" />
+
+<xs:element name="crearSeguimientoResponse" type="tns:crearSeguimientoResponse" />
+
+<xs:element name="crearUsuario" type="tns:crearUsuario" />
+
+<xs:element name="crearUsuarioResponse" type="tns:crearUsuarioResponse" />
+
+<xs:element name="descargarPlantilla" type="tns:descargarPlantilla" />
+
+<xs:element name="descargarPlantillaResponse" type="tns:descargarPlantillaResponse" />
+
+<xs:element name="listarActividades" type="tns:listarActividades" />
+
+<xs:element name="listarActividadesResponse" type="tns:listarActividadesResponse" />
+
+<xs:element name="listarContactos" type="tns:listarContactos" />
+
+<xs:element name="listarContactosResponse" type="tns:listarContactosResponse" />
+
+<xs:element name="listarEmpresas" type="tns:listarEmpresas" />
+
+<xs:element name="listarEmpresasResponse" type="tns:listarEmpresasResponse" />
+
+<xs:element name="listarEstados" type="tns:listarEstados" />
+
+<xs:element name="listarEstadosResponse" type="tns:listarEstadosResponse" />
+
+<xs:element name="listarOportunidades" type="tns:listarOportunidades" />
+
+<xs:element name="listarOportunidadesResponse" type="tns:listarOportunidadesResponse" />
+
+<xs:element name="listarRoles" type="tns:listarRoles" />
+
+<xs:element name="listarRolesPorUsuario" type="tns:listarRolesPorUsuario" />
+
+<xs:element name="listarRolesPorUsuarioResponse" type="tns:listarRolesPorUsuarioResponse" />
+
+<xs:element name="listarRolesResponse" type="tns:listarRolesResponse" />
+
+<xs:element name="listarSeguimientos" type="tns:listarSeguimientos" />
+
+<xs:element name="listarSeguimientosResponse" type="tns:listarSeguimientosResponse" />
+
+<xs:element name="listarTecnologias" type="tns:listarTecnologias" />
+
+<xs:element name="listarTecnologiasResponse" type="tns:listarTecnologiasResponse" />
+
+<xs:element name="listarTipoActividades" type="tns:listarTipoActividades" />
+
+<xs:element name="listarTipoActividadesResponse" type="tns:listarTipoActividadesResponse" />
+
+<xs:element name="listarTipoProyectos" type="tns:listarTipoProyectos" />
+
+<xs:element name="listarTipoProyectosResponse" type="tns:listarTipoProyectosResponse" />
+
+<xs:element name="listarTipoSeguimientos" type="tns:listarTipoSeguimientos" />
+
+<xs:element name="listarTipoSeguimientosResponse" type="tns:listarTipoSeguimientosResponse" />
+
+<xs:element name="listarUltimasActividades" type="tns:listarUltimasActividades" />
+
+<xs:element name="listarUltimasActividadesPorUsuario" type="tns:listarUltimasActividadesPorUsuario" />
+
+<xs:element name="listarUltimasActividadesPorUsuarioResponse" type="tns:listarUltimasActividadesPorUsuarioResponse" />
+
+<xs:element name="listarUltimasActividadesResponse" type="tns:listarUltimasActividadesResponse" />
+
+<xs:element name="listarUltimasOportunidades" type="tns:listarUltimasOportunidades" />
+
+<xs:element name="listarUltimasOportunidadesPorUsuario" type="tns:listarUltimasOportunidadesPorUsuario" />
+
+<xs:element name="listarUltimasOportunidadesPorUsuarioResponse" type="tns:listarUltimasOportunidadesPorUsuarioResponse" />
+
+<xs:element name="listarUltimasOportunidadesResponse" type="tns:listarUltimasOportunidadesResponse" />
+
+<xs:element name="listarUltimosSeguimientos" type="tns:listarUltimosSeguimientos" />
+
+<xs:element name="listarUltimosSeguimientosPorUsuario" type="tns:listarUltimosSeguimientosPorUsuario" />
+
+<xs:element name="listarUltimosSeguimientosPorUsuarioResponse" type="tns:listarUltimosSeguimientosPorUsuarioResponse" />
+
+<xs:element name="listarUltimosSeguimientosResponse" type="tns:listarUltimosSeguimientosResponse" />
+
+<xs:element name="listarUsuarios" type="tns:listarUsuarios" />
+
+<xs:element name="listarUsuariosResponse" type="tns:listarUsuariosResponse" />
+
+<xs:element name="modificarActividad" type="tns:modificarActividad" />
+
+<xs:element name="modificarActividadResponse" type="tns:modificarActividadResponse" />
+
+<xs:element name="modificarContacto" type="tns:modificarContacto" />
+
+<xs:element name="modificarContactoResponse" type="tns:modificarContactoResponse" />
+
+<xs:element name="modificarEmpresa" type="tns:modificarEmpresa" />
+
+<xs:element name="modificarEmpresaResponse" type="tns:modificarEmpresaResponse" />
+
+<xs:element name="modificarOportunidad" type="tns:modificarOportunidad" />
+
+<xs:element name="modificarOportunidadResponse" type="tns:modificarOportunidadResponse" />
+
+<xs:element name="modificarRol" type="tns:modificarRol" />
+
+<xs:element name="modificarRolResponse" type="tns:modificarRolResponse" />
+
+<xs:element name="modificarSeguimiento" type="tns:modificarSeguimiento" />
+
+<xs:element name="modificarSeguimientoResponse" type="tns:modificarSeguimientoResponse" />
+
+<xs:element name="modificarUsuario" type="tns:modificarUsuario" />
+
+<xs:element name="modificarUsuarioResponse" type="tns:modificarUsuarioResponse" />
+
+<xs:element name="validarUsuario" type="tns:validarUsuario" />
+
+<xs:element name="validarUsuarioResponse" type="tns:validarUsuarioResponse" />
+
+<xs:complexType name="modificarSeguimiento">
+<xs:sequence>
+<xs:element name="arg0" type="tns:seguimientoVo" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="seguimientoVo">
+<xs:sequence>
+<xs:element name="actividad" type="tns:actividadVo" minOccurs="0" />
+<xs:element name="enviado" type="xs:int" minOccurs="0" />
+<xs:element name="fechaAnuncio" type="xs:dateTime" minOccurs="0" />
+<xs:element name="fechaVencimiento" type="xs:dateTime" minOccurs="0" />
+<xs:element name="id" type="xs:int" minOccurs="0" />
+<xs:element name="seguimientotiposeguimientos" type="tns:seguimientoTipoSeguimientoVo" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+<xs:element name="usuario" type="tns:usuarioVo" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="actividadVo">
+<xs:sequence>
+<xs:element name="descripcion" type="xs:string" minOccurs="0" />
+<xs:element name="descripcionCierre" type="xs:string" minOccurs="0" />
+<xs:element name="documento" type="tns:documentoVo" minOccurs="0" />
+<xs:element name="estado" type="tns:estadoVo" minOccurs="0" />
+<xs:element name="fechaCreacion" type="xs:dateTime" minOccurs="0" />
+<xs:element name="fechaVencimiento" type="xs:dateTime" minOccurs="0" />
+<xs:element name="id" type="xs:int" minOccurs="0" />
+<xs:element name="oportunidad" type="tns:oportunidadVo" minOccurs="0" />
+<xs:element name="responsableCliente" type="tns:contactoVo" minOccurs="0" />
+<xs:element name="responsableUsuario" type="tns:usuarioVo" minOccurs="0" />
+<xs:element name="tipoactividad" type="tns:tipoActividadVo" minOccurs="0" />
+<xs:element name="titulo" type="xs:string" minOccurs="0" />
+<xs:element name="usuario" type="tns:usuarioVo" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="documentoVo">
+<xs:sequence>
+<xs:element name="id" type="xs:int" minOccurs="0" />
+<xs:element name="nombre" type="xs:string" minOccurs="0" />
+<xs:element name="ruta" type="xs:string" minOccurs="0" />
+<xs:element name="tamano" type="xs:string" minOccurs="0" />
+<xs:element name="tipo" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="estadoVo">
+<xs:sequence>
+<xs:element name="descripcion" type="xs:string" minOccurs="0" />
+<xs:element name="id" type="xs:int" />
+<xs:element name="nombre" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="oportunidadVo">
+<xs:sequence>
+<xs:element name="codigoInterno" type="xs:string" minOccurs="0" />
+<xs:element name="contacto" type="tns:contactoVo" minOccurs="0" />
+<xs:element name="descripcionCierre" type="xs:string" minOccurs="0" />
+<xs:element name="documento" type="tns:documentoVo" minOccurs="0" />
+<xs:element name="empresa" type="tns:empresaVo" minOccurs="0" />
+<xs:element name="estado" type="tns:estadoVo" minOccurs="0" />
+<xs:element name="fecha" type="xs:dateTime" minOccurs="0" />
+<xs:element name="fechaCierre" type="xs:dateTime" minOccurs="0" />
+<xs:element name="id" type="xs:int" minOccurs="0" />
+<xs:element name="tecnologia" type="tns:tecnologiaVo" minOccurs="0" />
+<xs:element name="tipoproyecto" type="tns:tipoProyectoVo" minOccurs="0" />
+<xs:element name="titulo" type="xs:string" minOccurs="0" />
+<xs:element name="usuario" type="tns:usuarioVo" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="contactoVo">
+<xs:sequence>
+<xs:element name="apellido" type="xs:string" minOccurs="0" />
+<xs:element name="cargo" type="xs:string" minOccurs="0" />
+<xs:element name="celular" type="xs:string" minOccurs="0" />
+<xs:element name="chat" type="xs:string" minOccurs="0" />
+<xs:element name="comentarios" type="xs:string" minOccurs="0" />
+<xs:element name="email" type="xs:string" minOccurs="0" />
+<xs:element name="empresaVo" type="tns:empresaVo" minOccurs="0" />
+<xs:element name="id" type="xs:int" minOccurs="0" />
+<xs:element name="nombre" type="xs:string" minOccurs="0" />
+<xs:element name="telefono" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="empresaVo">
+<xs:sequence>
+<xs:element name="descripcion" type="xs:string" minOccurs="0" />
+<xs:element name="direccion" type="xs:string" minOccurs="0" />
+<xs:element name="id" type="xs:int" />
+<xs:element name="nombre" type="xs:string" minOccurs="0" />
+<xs:element name="rubro" type="xs:string" minOccurs="0" />
+<xs:element name="rut" type="xs:long" minOccurs="0" />
+<xs:element name="telefono" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="tecnologiaVo">
+<xs:sequence>
+<xs:element name="descripcion" type="xs:string" minOccurs="0" />
+<xs:element name="id" type="xs:int" />
+<xs:element name="nombre" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="tipoProyectoVo">
+<xs:sequence>
+<xs:element name="descripcion" type="xs:string" minOccurs="0" />
+<xs:element name="id" type="xs:int" />
+<xs:element name="nombre" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="usuarioVo">
+<xs:sequence>
+<xs:element name="apellido" type="xs:string" minOccurs="0" />
+<xs:element name="cargo" type="xs:string" minOccurs="0" />
+<xs:element name="celular" type="xs:long" minOccurs="0" />
+<xs:element name="contrasena" type="xs:string" minOccurs="0" />
+<xs:element name="email" type="xs:string" minOccurs="0" />
+<xs:element name="id" type="xs:int" minOccurs="0" />
+<xs:element name="nick" type="xs:string" minOccurs="0" />
+<xs:element name="nombre" type="xs:string" minOccurs="0" />
+<xs:element name="telefono" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="tipoActividadVo">
+<xs:sequence>
+<xs:element name="descripcion" type="xs:string" minOccurs="0" />
+<xs:element name="id" type="xs:int" minOccurs="0" />
+<xs:element name="nombre" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="seguimientoTipoSeguimientoVo">
+<xs:sequence>
+<xs:element name="id" type="xs:int" />
+<xs:element name="seguimiento" type="tns:seguimientoVo" minOccurs="0" />
+<xs:element name="tiposeguimiento" type="tns:tipoSeguimientoVo" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="tipoSeguimientoVo">
+<xs:sequence>
+<xs:element name="descripcion" type="xs:string" minOccurs="0" />
+<xs:element name="id" type="xs:int" minOccurs="0" />
+<xs:element name="nombre" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="modificarSeguimientoResponse">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="ErrorSQLException">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="FaltaParametroException">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="TipoDatosException">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="buscarUsuario">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="buscarUsuarioResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:usuarioVo" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="DatosNoEncontradosException">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listarOportunidades">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0" />
+<xs:element name="arg1" type="xs:dateTime" minOccurs="0" />
+<xs:element name="arg2" type="xs:dateTime" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listarOportunidadesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:oportunidadVo" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listarEstados">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="listarEstadosResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:estadoVo" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listarUltimasActividadesPorUsuario">
+<xs:sequence>
+<xs:element name="arg0" type="xs:long" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listarUltimasActividadesPorUsuarioResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:actividadVo" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listarUsuarios">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="listarUsuariosResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:usuarioVo" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="crearOportunidad">
+<xs:sequence>
+<xs:element name="arg0" type="tns:oportunidadVo" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="crearOportunidadResponse">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="DatosDuplicadosException">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="DocumentoException">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listarTipoProyectos">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="listarTipoProyectosResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:tipoProyectoVo" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listarUltimosSeguimientos">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="listarUltimosSeguimientosResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:seguimientoVo" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listarTipoSeguimientos">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="listarTipoSeguimientosResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:tipoSeguimientoVo" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="descargarPlantilla">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="descargarPlantillaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:base64Binary" nillable="true" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listarSeguimientos">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0" />
+<xs:element name="arg1" type="xs:dateTime" minOccurs="0" />
+<xs:element name="arg2" type="xs:dateTime" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listarSeguimientosResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:seguimientoVo" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="modificarRol">
+<xs:sequence>
+<xs:element name="arg0" type="tns:rolVo" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="rolVo">
+<xs:sequence>
+<xs:element name="id" type="xs:int" minOccurs="0" />
+<xs:element name="nombre" type="xs:string" minOccurs="0" />
+<xs:element name="usuariorols" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="modificarRolResponse">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="modificarContacto">
+<xs:sequence>
+<xs:element name="arg0" type="tns:contactoVo" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="modificarContactoResponse">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="crearSeguimiento">
+<xs:sequence>
+<xs:element name="arg0" type="tns:seguimientoVo" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="crearSeguimientoResponse">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="modificarUsuario">
+<xs:sequence>
+<xs:element name="arg0" type="tns:usuarioVo" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="modificarUsuarioResponse">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="buscarActividad">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="buscarActividadResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:actividadVo" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listarRoles">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="listarRolesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:rolVo" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listarUltimasOportunidades">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="listarUltimasOportunidadesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:oportunidadVo" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listarTecnologias">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="listarTecnologiasResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:tecnologiaVo" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="crearActividad">
+<xs:sequence>
+<xs:element name="arg0" type="tns:actividadVo" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="crearActividadResponse">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="modificarActividad">
+<xs:sequence>
+<xs:element name="arg0" type="tns:actividadVo" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="modificarActividadResponse">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="listarUltimosSeguimientosPorUsuario">
+<xs:sequence>
+<xs:element name="arg0" type="xs:long" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listarUltimosSeguimientosPorUsuarioResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:seguimientoVo" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="crearContacto">
+<xs:sequence>
+<xs:element name="arg0" type="tns:contactoVo" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="crearContactoResponse">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="listarRolesPorUsuario">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listarRolesPorUsuarioResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:rolVo" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="modificarEmpresa">
+<xs:sequence>
+<xs:element name="arg0" type="tns:empresaVo" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="modificarEmpresaResponse">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="listarTipoActividades">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="listarTipoActividadesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:tipoActividadVo" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="borrarContacto">
+<xs:sequence>
+<xs:element name="arg0" type="tns:contactoVo" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="borrarContactoResponse">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="buscarEmpresa">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="buscarEmpresaResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:empresaVo" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="modificarOportunidad">
+<xs:sequence>
+<xs:element name="arg0" type="tns:oportunidadVo" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="modificarOportunidadResponse">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="listarActividades">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0" />
+<xs:element name="arg1" type="xs:dateTime" minOccurs="0" />
+<xs:element name="arg2" type="xs:dateTime" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listarActividadesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:actividadVo" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="borrarOportunidad">
+<xs:sequence>
+<xs:element name="arg0" type="tns:oportunidadVo" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="borrarOportunidadResponse">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="buscarSeguimiento">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="buscarSeguimientoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:seguimientoVo" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="crearRol">
+<xs:sequence>
+<xs:element name="arg0" type="tns:rolVo" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="crearRolResponse">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="crearEmpresa">
+<xs:sequence>
+<xs:element name="arg0" type="tns:empresaVo" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="crearEmpresaResponse">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="listarEmpresas">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="listarEmpresasResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:empresaVo" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="borrarEmpresa">
+<xs:sequence>
+<xs:element name="arg0" type="tns:empresaVo" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="borrarEmpresaResponse">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="crearUsuario">
+<xs:sequence>
+<xs:element name="arg0" type="tns:usuarioVo" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="crearUsuarioResponse">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="buscarOportunidad">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="buscarOportunidadResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:oportunidadVo" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="buscarRol">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="buscarRolResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:rolVo" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listarUltimasOportunidadesPorUsuario">
+<xs:sequence>
+<xs:element name="arg0" type="xs:long" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listarUltimasOportunidadesPorUsuarioResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:oportunidadVo" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listarUltimasActividades">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="listarUltimasActividadesResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:actividadVo" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="buscarDocumento">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="buscarDocumentoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:documentoVo" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="buscarContacto">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="buscarContactoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:contactoVo" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="listarContactos">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="listarContactosResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:contactoVo" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="validarUsuario">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0" />
+<xs:element name="arg1" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="validarUsuarioResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:usuarioVo" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

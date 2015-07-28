@@ -1,0 +1,156 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+    <constant name="struts.i18n.reload" value="false" />
+    <constant name="struts.devMode" value="false" />
+    <constant name="struts.configuration.xml.reload" value="false" />
+    <constant name="struts.custom.i18n.resources" value="globalMessages" />
+
+
+   <package name="default" extends="struts-default">
+        <result-types>
+            <result-type
+                class="org.apache.struts2.views.tiles.TilesResult" name="tiles"
+                default="true">
+            </result-type>
+             <result-type name="dispatcher" class="org.apache.struts2.dispatcher.ServletDispatcherResult" default="false">
+             </result-type>
+             <result-type class="DynamicStreamResult" name="dynamicStream" default="false">
+            </result-type>
+        </result-types>
+        <interceptors>
+	<!-- -->
+           
+
+            <!-- Igual al Struts default stack con un fileUpload con maximo 10MB de tamanio de archivo. -->
+            <interceptor-stack name="stack">
+                    <interceptor-ref name="fileUpload">
+                            <param name="maximumSize">10485760</param>
+                    </interceptor-ref>
+                    <interceptor-ref name="validation">
+                    <param name="validateAnnotatedMethodOnly">true</param>
+                    <param name="excludeMethods">input,back,cancel,browse</param>
+                </interceptor-ref>
+             </interceptor-stack>
+
+		</interceptors>
+
+        	<global-results>
+                    <result name="accesoDenegado" type="tiles">
+                            pagina.redirectAccesoDenegado
+                    </result>
+                    <result name="fileUploadMultipartSizeExceeded" type="tiles">
+                            pagina.redirectError
+                    </result>
+
+                    <result name="exception" type="tiles" >
+                            pagina.redirectError
+                    </result>
+        	</global-results>
+
+		<global-exception-mappings>
+
+			<exception-mapping
+				exception="org.acegisecurity.AccessDeniedException"
+				result="accesoDenegado" />
+			<exception-mapping
+				exception="com.telefonica.iwc.FileUploadMultipartSizeExceededException"
+				result="fileUploadMultipartSizeExceeded" />
+			<exception-mapping exception="java.lang.Exception"
+				result="exception" />
+
+		</global-exception-mappings>
+
+	<action name="error" class="com.suricata.argos.action.ErrorAction">
+            <result name="htmlInterfaceException" type="tiles">pagina.operacionError</result>
+        </action>
+
+     
+        <action name="inicio" class="com.suricata.argos.action.InicioAction">
+            <result name="success" type="tiles">pagina.inicio</result>
+        </action>
+
+        <action name="validarUsuario" class="com.suricata.argos.action.LoginAction" method="validarUsuario">
+            <result name="redirInicio" type="redirectAction">
+                <param name="actionName">inicio</param>
+                <param name="namespace">/</param>
+                <param name="parse">true</param>
+            </result>
+            <result name="input" type="tiles">pagina.login</result>
+        </action>
+
+           <action name="login" class="com.suricata.argos.action.LoginAction">
+            <result name="input" type="tiles">pagina.login</result>
+            <result name="success" type="tiles">pagina.UsuarioListado</result>
+        </action>
+
+    </package>
+
+  <package name="seguridad" namespace="/seguridad" extends="default">
+        <action name="*Editar" class="com.suricata.argos.action.seguridad.{1}Action" method="editar">
+            <result name="success" type="tiles">pagina.{1}</result>
+        </action>
+         <action name="*Crear" class="com.suricata.argos.action.seguridad.{1}Action"  method="crear">
+            <result name="success" type="tiles">pagina.{1}</result>
+        </action>
+         <action name="*Salvar" class="com.suricata.argos.action.seguridad.{1}Action" method="salvar">
+            <result name="success" type="tiles">pagina.operacionExitosa</result>
+            <result name="error" type="tiles">pagina.operacionError</result>
+        </action>
+        <action name="listado*" class="com.suricata.argos.action.seguridad.Listado{1}Action">
+            <result name="success" type="tiles">pagina.{1}Listado</result>
+        </action>
+   </package>
+
+    <package name="oportunidades" namespace="/oportunidades" extends="default">
+        <action name="*Editar" class="com.suricata.argos.action.oportunidad.{1}Action" method="editar">
+            <result name="success" type="tiles">pagina.{1}</result>
+        </action>
+         <action name="*Crear" class="com.suricata.argos.action.oportunidad.{1}Action"  method="crear">
+            <result name="success" type="tiles">pagina.{1}</result>
+        </action>
+         <action name="*Salvar" class="com.suricata.argos.action.oportunidad.{1}Action" method="salvar">
+            <result name="salvar" type="tiles">pagina.operacionExitosa</result>
+             <result name="inputCrear" type="redirectAction">
+                    <param name="actionName">{1}Crear</param>
+                    <param name="namespace">/oportunidades</param>
+                    <param name="parse">true</param>         
+             </result>
+            <result name="error" type="tiles">pagina.operacionError</result>
+        </action>
+        
+        <action name="listado*" class="com.suricata.argos.action.oportunidad.Listado{1}Action">
+            <result name="success" type="tiles">pagina.{1}Listado</result>
+        </action>
+
+        <action name="download*" class="com.suricata.argos.action.oportunidad.{1}Action">
+           <result name="success" type="dynamicStream">
+               <param name="inputName">documentStream</param>
+            </result>
+            <result name="salvar" type="tiles">pagina.operacionExitosa</result>
+        </action>
+
+        <action name="oportunidadDownload" class="com.suricata.argos.action.oportunidad.OportunidadDownloadAction">
+           <result name="success" type="dynamicStream">
+               <param name="inputName">documentStream</param>
+            </result>
+            <result name="salvar" type="tiles">pagina.operacionExitosa</result>
+            <result name="input" type="tiles">pagina.OportunidadEdicion</result>
+            <result name="input_edit" type="redirectAction">
+                 <param name="actionName">oportunidadDownload</param>
+                    <param name="namespace">/oportunidades</param>
+                    <param name="parse">true</param>
+            </result>
+        </action>
+ 
+        <action name="actividadDownload" class="com.suricata.argos.action.oportunidad.ActividadDownloadAction">
+           <result name="success" type="dynamicStream">
+               <param name="inputName">documentStream</param>
+            </result>
+            <result name="salvar" type="tiles">pagina.operacionExitosa</result>
+            <result name="input" type="tiles">pagina.ActividadEdicion</result>
+        </action>
+   </package>
+
+</struts>
